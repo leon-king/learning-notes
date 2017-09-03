@@ -460,7 +460,7 @@ JAVA反射机制是在运行状态中, 对于任意一个类, 都能够知道这
 
 ---
 
-### ArrayList、LinkedList、Vector的底层实现和区别**
+### ArrayList、LinkedList、Vector的底层实现和区别
 
 * 从同步性来看，ArrayList和LinkedList是不同步的，而Vector是的。所以线程安全的话，可以使用ArrayList或LinkedList，可以节省为同步而耗费的开销。但在多线程下，有时候就不得不使用Vector了。当然，也可以通过一些办法包装ArrayList、LinkedList，使我们也达到同步，但效率可能会有所降低。
 
@@ -542,3 +542,6 @@ HashMap 不是线程安全的，可以存储 null 值
 Stack类：继承自Vector，实现一个后进先出的栈。提供了几个基本方法，push、pop、peak、empty、search等。
 
 Queue接口：提供了几个基本方法，offer、poll、peek等。已知实现类有LinkedList、PriorityQueue等。
+
+
+http://www.cnblogs.com/chenssy/p/3751221.html
