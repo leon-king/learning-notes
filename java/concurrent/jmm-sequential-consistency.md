@@ -1,7 +1,7 @@
 title: 深入理解Java内存模型（三）——顺序一致性
 tags: [java,jmm]
 categories: [java,concurrent]
-date: 2017-09-03 23:35:00
+date: 2017-09-03 23:10:00
 ---
 
 ### 数据竞争与顺序一致性保证

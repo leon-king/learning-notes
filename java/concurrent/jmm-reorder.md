@@ -1,13 +1,13 @@
 title: 深入理解Java内存模型（二）——重排序
 tags: [java,jmm]
 categories: [java,concurrent]
-date: 2017-09-03 23:30:00
+date: 2017-09-03 23:09:00
 ---
 
 ### 数据依赖性
 如果两个操作访问同一个变量，且这两个操作中有一个为写操作，此时这两个操作之间就存在数据依赖性。数据依赖分下列三种类型：
 
-<table width="400" border="1">
+<table border="1">
 <tbody>
 <tr>
 <td>名称</td>

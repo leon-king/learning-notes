@@ -1,7 +1,7 @@
 title: 深入理解Java内存模型（六）——final
 tags: [java,jmm]
 categories: [java,concurrent]
-date: 2017-09-03 23:08:00
+date: 2017-09-03 23:13:00
 ---
 
 与前面介绍的锁和volatile相比较，对final域的读和写更像是普通的变量访问。对于final域，编译器和处理器要遵守两个重排序规则：

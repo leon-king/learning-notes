@@ -1,7 +1,7 @@
 title: 深入理解Java内存模型（四）——volatile
 tags: [java,jmm,volatile]
 categories: [java,concurrent]
-date: 2017-09-03 23:35:00
+date: 2017-09-03 23:11:00
 ---
 
 ### volatile的特性

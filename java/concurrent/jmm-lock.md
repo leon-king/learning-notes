@@ -1,7 +1,7 @@
 title: 深入理解Java内存模型（五）——锁
 tags: [java,jmm]
 categories: [java,concurrent]
-date: 2017-09-03 23:08:00
+date: 2017-09-03 23:12:00
 ---
 
 ### 锁的释放-获取建立的happens before 关系
