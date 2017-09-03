@@ -16,55 +16,57 @@ date: 2017-09-03 23:14:00
 
 下面的表格展示了常见处理器内存模型的细节特征：
 
-<table border="1" cellspacing="0" cellpadding="0">
+<div style="overflow-x:scroll;">
+<table border="1" cellspacing="0" cellpadding="0" style="min-width:600px;">
 <tbody>
 <tr>
-<td valign="top" width="85">内存模型名称</td>
-<td valign="top" width="85">对应的处理器</td>
-<td valign="top" width="85">Store-Load 重排序</td>
-<td valign="top" width="85">Store-Store重排序</td>
-<td valign="top" width="85">Load-Load 和Load-Store重排序</td>
-<td valign="top" width="85">可以更早读取到其它处理器的写</td>
-<td valign="top" width="85">可以更早读取到当前处理器的写</td>
+<td valign="top">内存模型名称</td>
+<td valign="top">对应的处理器</td>
+<td valign="top">Store-Load 重排序</td>
+<td valign="top">Store-Store重排序</td>
+<td valign="top">Load-Load 和Load-Store重排序</td>
+<td valign="top">可以更早读取到其它处理器的写</td>
+<td valign="top">可以更早读取到当前处理器的写</td>
 </tr>
 <tr>
-<td valign="top" width="85">TSO</td>
-<td valign="top" width="85">sparc-TSOX64</td>
-<td valign="top" width="85">Y</td>
-<td valign="top" width="85"></td>
-<td valign="top" width="85"></td>
-<td valign="top" width="85"></td>
-<td valign="top" width="85">Y</td>
+<td valign="top">TSO</td>
+<td valign="top">sparc-TSOX64</td>
+<td valign="top">Y</td>
+<td valign="top"></td>
+<td valign="top"></td>
+<td valign="top"></td>
+<td valign="top">Y</td>
 </tr>
 <tr>
-<td valign="top" width="85">PSO</td>
-<td valign="top" width="85">sparc-PSO</td>
-<td valign="top" width="85">Y</td>
-<td valign="top" width="85">Y</td>
-<td valign="top" width="85"></td>
-<td valign="top" width="85"></td>
-<td valign="top" width="85">Y</td>
+<td valign="top">PSO</td>
+<td valign="top">sparc-PSO</td>
+<td valign="top">Y</td>
+<td valign="top">Y</td>
+<td valign="top"></td>
+<td valign="top"></td>
+<td valign="top">Y</td>
 </tr>
 <tr>
-<td valign="top" width="85">RMO</td>
-<td valign="top" width="85">ia64</td>
-<td valign="top" width="85">Y</td>
-<td valign="top" width="85">Y</td>
-<td valign="top" width="85">Y</td>
-<td valign="top" width="85"></td>
-<td valign="top" width="85">Y</td>
+<td valign="top">RMO</td>
+<td valign="top">ia64</td>
+<td valign="top">Y</td>
+<td valign="top">Y</td>
+<td valign="top">Y</td>
+<td valign="top"></td>
+<td valign="top">Y</td>
 </tr>
 <tr>
-<td valign="top" width="85">PowerPC</td>
-<td valign="top" width="85">PowerPC</td>
-<td valign="top" width="85">Y</td>
-<td valign="top" width="85">Y</td>
-<td valign="top" width="85">Y</td>
-<td valign="top" width="85">Y</td>
-<td valign="top" width="85">Y</td>
+<td valign="top">PowerPC</td>
+<td valign="top">PowerPC</td>
+<td valign="top">Y</td>
+<td valign="top">Y</td>
+<td valign="top">Y</td>
+<td valign="top">Y</td>
+<td valign="top">Y</td>
 </tr>
 </tbody>
 </table>
+</div>
 
 在这个表格中，我们可以看到所有处理器内存模型都允许写-读重排序，原因在第一章以说明过：它们都使用了写缓存区，写缓存区可能导致写-读操作重排序。同时，我们可以看到这些处理器内存模型都允许更早读到当前处理器的写，原因同样是因为写缓存区：由于写缓存区仅对当前处理器可见，这个特性导致当前处理器可以比其他处理器先看到临时保存在自己的写缓存区中的写。
 
